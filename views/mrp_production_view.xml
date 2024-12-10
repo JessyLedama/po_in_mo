@@ -1,0 +1,33 @@
+<odoo>
+    <record id="view_mrp_production_inherit" model="ir.ui.view">
+        <field name="name">mrp.production.form.inherit</field>
+        <field name="model">mrp.production</field>
+        <field name="inherit_id" ref="mrp.mrp_production_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='bom_id']" position="after">
+                <label for="partner_id" />
+                <field name="partner_id"/>
+                <field name="available_purchase_orders" invisible="1"/>
+                <label for="purchase_order"/>
+                <field name="purchase_order" domain="[('id', 'in', available_purchase_orders)]"/>
+                
+            </xpath>
+
+            <xpath expr="//field[@name='total_cost']" position="after">
+                <field name="number_plate"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_mrp_production_tree_inherit" model="ir.ui.view">
+        <field name="name"> Manufacturing Orders </field>
+        <field name="model">mrp.production</field>
+        <field name="inherit_id" ref="mrp.mrp_production_tree_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="after">
+                <field name="partner_id"/>
+                <field name="number_plate"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
