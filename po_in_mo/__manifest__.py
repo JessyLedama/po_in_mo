@@ -9,7 +9,7 @@
                     3. Introduces Number Plate in PO
                     4. When a selected PO has a number plate in it, the number plate is imported into MO.
                     5. Farmer and Number Plate in list and form view """,
-    'author': 'Jessy Ledama',
+    'author': 'SIMI Technologies',
     'depends': ['mrp', 'purchase'],
     'data': [
         'views/mrp_settings_view.xml',
