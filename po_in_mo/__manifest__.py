@@ -1,6 +1,6 @@
 {
     'name': 'Required PO in MO',
-    'version': '16.0.1.1',
+    'version': '17.0.1.1',
     'category': 'Manufacturing',
     'summary': 'Require Purchase Order for specific products in Manufacturing Orders',
     'description': """ This module introduces a number of features:
